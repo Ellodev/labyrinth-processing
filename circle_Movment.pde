@@ -1,4 +1,4 @@
-int Diameter = 50;
+int Diameter = 80;
 
 int prevMouseX;
 int prevMouseY;
