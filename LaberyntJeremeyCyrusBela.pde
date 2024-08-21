@@ -3,12 +3,9 @@ void setup()  { // draws window, sets color
 
   background(255,255,255);
   
+  boolean isInStart = false;
 }
 
 void draw() {
-  map1();
-  fill(255, 0, 0);
-  stroke(255, 0, 0);
-  circle(mouseX, mouseY, Diameter);
-
+  circleMovement();
 }
