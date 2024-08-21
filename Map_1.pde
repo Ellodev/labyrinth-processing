@@ -3,9 +3,9 @@
 boolean map1() {
   noStroke();
     
-  fill(0); // Black fill for squares
+  fill(255); // Black fill for squares
   //needs optimiziation
-  
+background(0);
 rect(0,100,100,100);
 rect(100,100,100,400);
 rect(100,500,400,100);
