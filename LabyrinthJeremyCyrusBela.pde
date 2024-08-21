@@ -20,4 +20,8 @@ void draw() {
     text("Done!", 500, 400);
   }
   detectEnd();
+  if (isInStart) {
+  collisionDetection();
+}
+  
 }
