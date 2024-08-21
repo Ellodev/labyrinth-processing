@@ -34,4 +34,8 @@ void draw() {
     text("Move to the blue to start.", 550, 400);
   }
   detectEnd();
+  if (isInStart) {
+  collisionDetection();
+}
+  
 }
