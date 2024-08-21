@@ -9,7 +9,6 @@ void setup()  { // draws window, sets color
 void draw() {
   if (mouseX < 75 && mouseX > 25 && mouseY < 175 && mouseY > 125) {
     isInStart = true;
-    println("is in start");
   }
   if (gameEnd == false) {
     circleMovement();
