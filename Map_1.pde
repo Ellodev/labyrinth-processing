@@ -1,5 +1,3 @@
-
-
 boolean map1() {
   noStroke();
     
@@ -8,7 +6,8 @@ boolean map1() {
   background(0);
   fill(0, 0, 255);
   rect(0,100,100,100);
-  if (isInStart)  {
+  
+  if (gameStart)  {
     fill(255);
     rect(100,100,100,400);
     rect(100,500,400,100);
@@ -20,5 +19,6 @@ boolean map1() {
     fill(0, 255, 0);
     rect(1000, 500, 100, 100);
   }
-return true;
+  
+  return true;
 }
