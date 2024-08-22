@@ -18,7 +18,13 @@ void displayEnd() {
     text("enter your name to be added", 550, 270);
   } else if (achievedLeaderboard == false) {
     text("DONE!, sadly you didnt make it on the leaderboard", 550, 250);
-  }
+  } else if (isDead)
+  {
+  background(255, 0, 0);
+  text("LOSER!!!!", 550, 350);
+  text("SCORE: " + String.valueOf(score), 550, 450); 
+ 
+  } else 
   text("SCORE: " + String.valueOf(score), 550, 200); 
 }
 

@@ -11,6 +11,7 @@ void setup()  { // draws window, sets color
 void draw() {
   if (gameEnd == false) {
     circleMovement();
+    isDeadCheck();
   } 
   else if (gameEnd == true && !leaderboardUpdated) { 
       updateLeaderboard();
