@@ -6,6 +6,7 @@ void setup()  { // draws window, sets color
   size(1100,800);  
   resetScore();
   setupLeaderboard();
+  resetCollider();
 }
 
 void draw() {
@@ -20,7 +21,7 @@ void draw() {
     
   }
   
-  if (mouseX < 60 && mouseX > 40 && mouseY < 160 && mouseY > 140) {
+  if (controlledMouseX < 60 && controlledMouseX > 40 && controlledMouseY < 160 && controlledMouseY > 140) {
     gameStart = true;
   }
   
