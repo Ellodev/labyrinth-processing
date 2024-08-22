@@ -28,11 +28,12 @@ void draw() {
     displayStart();
   }
   if (gameStart) {
-    drawPointsOnCircle(mouseX,mouseY, Diameter / 2 + 5, 8);
+    checkCollision();
   }
   
   if (gameStart && !gameEnd) {
     scoreManager();
   }
   detectEnd();  
+  //println(collision);
 }
