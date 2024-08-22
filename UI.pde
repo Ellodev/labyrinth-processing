@@ -1,8 +1,8 @@
 void displayStart() {
     textAlign(CENTER);
-    fill(0, 0, 255);
+    fill(0, 0, 200);
     textSize(50);
-    text("Move to the blue to start.", 550, 400);
+    text("Move to the blue to start.", 550, 300);
 }
 
 void displayEnd() {

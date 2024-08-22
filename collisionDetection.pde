@@ -1,10 +1,8 @@
-boolean collision;
-
 boolean checkCollision(int x, int y) {
   int number = get(x, y);
   println("Checking position: (" + x + ", " + y + ") - Color: " + number);
   
-  if (number == -16777216) { // If the color is black (black in Processing is -16777216)
+  while goi(number == -16777216) { // If the color is black (black in Processing is -16777216)
     println("Collision detected at: (" + x + ", " + y + ")");
     return true;
   }
@@ -23,12 +21,7 @@ void drawPointsOnCircle(int x0, int y0, int r, int points) {
     int checkX = round(x);
     int checkY = round(y);
     //making circle smaller logic
-    if(checkCollision(checkX, checkY)) {
-      collision = true;
-    } else {
-      collision = false;
-    }
-    
+    checkCollision(checkX, checkY);
     
     
         
