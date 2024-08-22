@@ -1,7 +1,6 @@
 boolean gameStart = false;
-//lol
+
 void setup()  { // draws window, sets color 
-  frameRate(60);
   size(1100,800);  
   resetScore();
 }
@@ -22,7 +21,8 @@ void draw() {
     displayStart();
   }
   if (gameStart) {
-    drawPointsOnCircle(mouseX,mouseY, Diameter / 2 + 5, 8);
+    collisionDetection();
+    scoreManager();
   }
   detectEnd();
 }
