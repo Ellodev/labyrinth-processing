@@ -26,7 +26,7 @@ void drawPointsOnCircle(int x0, int y0, int r, int points) {
     if(checkCollision(checkX, checkY)) {
       collision = true;
     } else {
-      collision = true;
+      collision = false;
     }
     
     

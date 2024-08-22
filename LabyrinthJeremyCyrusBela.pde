@@ -24,5 +24,9 @@ void draw() {
   if (gameStart) {
     drawPointsOnCircle(mouseX,mouseY, Diameter / 2 + 5, 8);
   }
+  
+  if (gameStart && !gameEnd) {
+    scoreManager();
+  }
   detectEnd();
 }

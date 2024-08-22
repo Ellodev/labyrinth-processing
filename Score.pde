@@ -1,15 +1,16 @@
-int startScore =100; //startScore hier ändern.
 int score;
-
+int delay;
 
 void resetScore() {
-  score = startScore;
-  delay = true;
+  score = 100; //start Score hier ändern.
+  delay = 30; //Delay Frames hier.
 }
 
 void scoreManager() {
-  if(collision && delay) {
-    scoreDelay(1000);
-    Diameter = Diameter - 10;
+  if(frameCount > delay) {
+    frameCount = 0;
+  }
+  if(collision && frameCount == delay) {
+      Diameter = Diameter - 10;  
   }
 }

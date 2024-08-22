@@ -1,8 +1,5 @@
-boolean delay;
+//boolean delay;
+//int i; 
 
-void scoreDelay(int d) {
-  delay = false;
-  //delay(d);
-  delay = true;
-}
+
   
