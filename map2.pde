@@ -1,6 +1,6 @@
 void square(int x, int y){
 rect(x,y,100,100);
-
+ 
 }
 
 boolean map2() {

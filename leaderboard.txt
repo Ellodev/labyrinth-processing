@@ -1,6 +1,6 @@
 anotherplayer,100
 anotherplayer,100
-anotherplayer,100
+anotherplayer,70
 anotherplayer,60
 bela2,55
 bela2,53
