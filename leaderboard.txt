@@ -1,6 +1,7 @@
 test,100
 cyrus,85
 u,80
+lol,80
 a,70
 test,70
 test,60
@@ -8,4 +9,3 @@ null,50
 jamie,50
 anotherplayer,40
 jeremy,40
-bela,40
