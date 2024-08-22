@@ -1,27 +1,15 @@
-int damageEffectAlpha =255; // Alpha value for the damage effect
-int fadeSpeed = 30; // Speed at which the effect fades ou
+int fadeSpeed = 15;
+int saturation= 200;
 
-
-void DamageEffect() {
+void drawDamageEffect(int saturation, int fadespeed)
+{
+  while(saturation > 20)
+  {
   noStroke();
-  
-  fill(255, 0, 0, damageEffectAlpha); // Red color with alpha transparency
-   damageEffectAlpha =- fadeSpeed;
-  rect(0, 0, width, height); // Cover the entire screen
+  fill(saturation,0,0);
+  rect(0,0,width,height);
   }
   
-
-
-void drawDamageEffect(){
-
-
-DamageEffect();
-    damageEffectAlpha -= fadeSpeed; // Gradually reduce the alpha value
-    if (damageEffectAlpha < 0) 
-    {
-      damageEffectAlpha = 0;
-
-
-      }
-      damageEffectAlpha = 100;
+  saturation =- 10;
+  
 }

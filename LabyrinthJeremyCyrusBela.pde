@@ -12,15 +12,23 @@ void setup()  { // draws window, sets color
 void draw() {
   if (gameEnd == false) {
     circleMovement();
+    isDeadCheck();
   } 
   else if (gameEnd == true && !leaderboardUpdated) { 
-      displayEnd();
       updateLeaderboard();
+      displayEnd();
       displayLeaderboard();
       leaderboardUpdated = true;
-    
   }
   
+  if (playerName != null && updatedLeaderboardFile == false) {
+    for (int i = 0; i < 1; i++) {
+      updateLeaderboardFile();
+      displayLeaderboard();
+    }
+  }  
+  
+
   if (controlledMouseX < 60 && controlledMouseX > 40 && controlledMouseY < 160 && controlledMouseY > 140) {
     gameStart = true;
   }
@@ -28,6 +36,7 @@ void draw() {
   if(!gameStart) {
     displayStart();
   }
+  
   if (gameStart) {
     checkCollision();
   }
@@ -35,11 +44,6 @@ void draw() {
   if (gameStart && !gameEnd) {
     scoreManager();
   }
-
-  
-  
-  
-  
   detectEnd();  
   //println(collision);
 }
