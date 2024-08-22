@@ -1,0 +1,6 @@
+bela2,200
+newPlayer,100
+test,100
+lol,100
+Jeremy, 50
+bela, 10

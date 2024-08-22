@@ -16,5 +16,4 @@ void collisionDetection() {
   } else {
   collision = false;
   }
-  println(collision);
 }
