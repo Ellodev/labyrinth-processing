@@ -13,13 +13,20 @@ void draw() {
     circleMovement();
   } 
   else if (gameEnd == true && !leaderboardUpdated) { 
-      displayEnd();
       updateLeaderboard();
+      displayEnd();
       displayLeaderboard();
       leaderboardUpdated = true;
-    
   }
   
+  if (playerName != null && updatedLeaderboardFile == false) {
+    for (int i = 0; i < 1; i++) {
+      updateLeaderboardFile();
+      displayLeaderboard();
+    }
+  }  
+  
+
   if (mouseX < 60 && mouseX > 40 && mouseY < 160 && mouseY > 140) {
     gameStart = true;
   }
@@ -27,6 +34,7 @@ void draw() {
   if(!gameStart) {
     displayStart();
   }
+  
   if (gameStart) {
     drawPointsOnCircle(mouseX,mouseY, Diameter / 2 + 5, 8);
   }
@@ -34,10 +42,5 @@ void draw() {
   if (gameStart && !gameEnd) {
     scoreManager();
   }
-
-  
-  
-  
-  
   detectEnd();  
 }

@@ -3,7 +3,7 @@ int delay;
 
 void resetScore() {
   score = 100; //start Score hier ändern.
-  delay = 30; //Delay Frames hier.
+  delay = 5; //Delay Frames hier.
 }
 
 void scoreManager() {

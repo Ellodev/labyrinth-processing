@@ -1,6 +1,10 @@
+boolean achievedLeaderboard = false;
+
+boolean updatedLeaderboardFile = false;
+
 String[] leaderboard = new String[0];
 
-String playerName = "anotherplayer";
+String playerName;
 
 String[] setupLeaderboard() {
   leaderboard = loadStrings("leaderboard.txt");
@@ -8,18 +12,46 @@ String[] setupLeaderboard() {
 }
 
 void displayLeaderboard() {
+  background(0);
+  displayEnd();
   textSize(20);
-  text("Leaderboard", 550, 490);
+  text("Leaderboard", 550, 430);
   textAlign(CENTER);
   for (int i = 0; i < leaderboard.length; i++) {
     String[] leaderboardParts = split(leaderboard[i], ',');
-    text(leaderboardParts[0] + ": " + leaderboardParts[1], 550, 510 + i * 20);
+    text(leaderboardParts[0] + ": " + leaderboardParts[1], 550, 455 + i * 20);
     textAlign(CENTER);
   }
+   
 }
 
 void updateLeaderboard() {
-  // Create a new array with one more slot
+  
+  sortLeaderboard();
+  
+  // Check if we have more than 10 entries
+  if (leaderboard.length > 10) {
+    // Trim the leaderboard to top 10
+    String[] trimmedLeaderboard = new String[10];
+    for (int i = 0; i < 10; i++) {
+      trimmedLeaderboard[i] = leaderboard[i];
+    }
+    leaderboard = trimmedLeaderboard;
+  }
+  
+  int lowestLeaderboardScore = int(split(leaderboard[9], ',')[1]);
+  
+  println(lowestLeaderboardScore);
+  
+  if (score > lowestLeaderboardScore) {
+    achievedLeaderboard = true;
+    askName();
+  }
+}
+
+void updateLeaderboardFile() {
+  println("hi there");
+       // Create a new array with one more slot
   String[] newLeaderboard = new String[leaderboard.length + 1];
   
   // Copy existing entries
@@ -34,21 +66,10 @@ void updateLeaderboard() {
   // Replace the old array with the new one
   leaderboard = newLeaderboard;
   
-  // println(playerName, score, leaderboard);
-  
   sortLeaderboard();
   
-  // Check if we have more than 10 entries
-  if (leaderboard.length > 10) {
-    // Trim the leaderboard to top 10
-    String[] trimmedLeaderboard = new String[10];
-    for (int i = 0; i < 10; i++) {
-      trimmedLeaderboard[i] = leaderboard[i];
-    }
-    leaderboard = trimmedLeaderboard;
-  }
-  
   saveStrings("leaderboard.txt", leaderboard);
+  updatedLeaderboardFile = true;
 }
 
 // Function to sort the leaderboard from highest to lowest score
@@ -60,8 +81,4 @@ void sortLeaderboard() {
       return scoreB - scoreA; // Sort in descending order
     }
   });
-}
-
-void checkIfLeaderboardPosition() {
-
 }

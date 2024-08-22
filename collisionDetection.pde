@@ -2,10 +2,10 @@ boolean collision;
 
 boolean checkCollision(int x, int y) {
   int number = get(x, y);
-  println("Checking position: (" + x + ", " + y + ") - Color: " + number);
+  // println("Checking position: (" + x + ", " + y + ") - Color: " + number);
   
   if (number == -16777216) { // If the color is black (black in Processing is -16777216)
-    println("Collision detected at: (" + x + ", " + y + ")");
+    // println("Collision detected at: (" + x + ", " + y + ")");
     return true;
   }
   return false;
