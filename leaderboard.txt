@@ -1,5 +1,6 @@
 anotherplayer,100
 anotherplayer,100
+anotherplayer,60
 bela2,55
 bela2,53
 bela2,44
@@ -7,4 +8,3 @@ anotherplayer,40
 bela2,33
 lol,30
 bela2,21
-test,20
