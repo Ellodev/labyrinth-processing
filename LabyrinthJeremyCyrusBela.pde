@@ -1,5 +1,5 @@
 boolean gameStart = false;
-
+//lol
 void setup()  { // draws window, sets color 
   size(1100,800);  
   resetScore();
@@ -21,7 +21,7 @@ void draw() {
     displayStart();
   }
   if (gameStart) {
-    collisionDetection();
+    drawPointsOnCircle(mouseX,mouseY, Diameter / 2 + 5, 8);
   }
   detectEnd();
 }
