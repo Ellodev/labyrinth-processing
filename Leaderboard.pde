@@ -1,6 +1,6 @@
 String[] leaderboard = new String[0];
 
-String playerName = "bela2";
+String playerName = "anotherplayer";
 
 String[] setupLeaderboard() {
   leaderboard = loadStrings("leaderboard.txt");
@@ -38,6 +38,16 @@ void updateLeaderboard() {
   
   sortLeaderboard();
   
+  // Check if we have more than 10 entries
+  if (leaderboard.length > 10) {
+    // Trim the leaderboard to top 10
+    String[] trimmedLeaderboard = new String[10];
+    for (int i = 0; i < 10; i++) {
+      trimmedLeaderboard[i] = leaderboard[i];
+    }
+    leaderboard = trimmedLeaderboard;
+  }
+  
   saveStrings("leaderboard.txt", leaderboard);
 }
 
@@ -50,4 +60,8 @@ void sortLeaderboard() {
       return scoreB - scoreA; // Sort in descending order
     }
   });
+}
+
+void checkIfLeaderboardPosition() {
+
 }

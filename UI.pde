@@ -13,3 +13,7 @@ void displayEnd() {
   text("DONE!", 550, 350);
   text("SCORE: " + String.valueOf(score), 550, 450); 
 }
+
+void askName() {
+    
+}

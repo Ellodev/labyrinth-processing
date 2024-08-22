@@ -1,6 +1,10 @@
-bela2,200
-newPlayer,100
-test,100
-lol,100
-Jeremy, 50
-bela, 10
+anotherplayer,100
+anotherplayer,100
+bela2,55
+bela2,53
+bela2,44
+anotherplayer,40
+bela2,33
+lol,30
+bela2,21
+test,20
