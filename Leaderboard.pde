@@ -19,6 +19,7 @@ void displayLeaderboard() {
 }
 
 void updateLeaderboard() {
+  
   // Create a new array with one more slot
   String[] newLeaderboard = new String[leaderboard.length + 1];
   

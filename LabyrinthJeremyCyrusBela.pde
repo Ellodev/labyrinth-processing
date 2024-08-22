@@ -11,6 +11,7 @@ void setup()  { // draws window, sets color
 void draw() {
   if (gameEnd == false) {
     circleMovement();
+    isDeadCheck();
   } 
   else if (gameEnd == true && !leaderboardUpdated) { 
       displayEnd();
@@ -19,7 +20,8 @@ void draw() {
       leaderboardUpdated = true;
     
   }
-  
+
+
   if (mouseX < 60 && mouseX > 40 && mouseY < 160 && mouseY > 140) {
     gameStart = true;
   }

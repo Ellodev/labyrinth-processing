@@ -12,6 +12,14 @@ void displayEnd() {
   fill(0);
   text("DONE!", 550, 350);
   text("SCORE: " + String.valueOf(score), 550, 450); 
+  if (isDead)
+  {
+  background(255, 0, 0);
+  text("LOSER!!!!", 550, 350);
+  text("SCORE: " + String.valueOf(score), 550, 450); 
+ 
+  }
+  
 }
 
 void askName() {
