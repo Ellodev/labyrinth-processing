@@ -10,7 +10,6 @@ void scoreManager() {
   if(frameCount > delay) {
     frameCount = 0;
   }
-  if(collision && frameCount == delay) {
-      Diameter = Diameter - 10;  
+  //if(collision && frameCount == delay) {
+     // Diameter = Diameter - 10;  
   }
-}

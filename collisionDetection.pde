@@ -2,7 +2,7 @@ boolean checkCollision(int x, int y) {
   int number = get(x, y);
   println("Checking position: (" + x + ", " + y + ") - Color: " + number);
   
-  while goi(number == -16777216) { // If the color is black (black in Processing is -16777216)
+  while (number == -16777216) { // If the color is black (black in Processing is -16777216)
     println("Collision detected at: (" + x + ", " + y + ")");
     return true;
   }
