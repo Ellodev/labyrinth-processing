@@ -14,4 +14,3 @@ void scoreManager() {
       Diameter = Diameter - 10;  
       score = score - 10;
   }
-}

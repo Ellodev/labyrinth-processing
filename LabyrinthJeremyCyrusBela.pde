@@ -32,7 +32,7 @@ void draw() {
   }
   
   if (gameStart && !gameEnd) {
-    scoreManager();
+    //scoreManager();
   }
   detectEnd();  
 }
