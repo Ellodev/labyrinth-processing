@@ -1,5 +1,8 @@
 boolean collision;
-boolean createCollisionPoints;
+boolean setCollisionPoints;
+
+color lava1 = color(255, 132, 38);
+color lava2 = color(255, 209, 0);
 
 int x;
 int xFinal;
@@ -14,29 +17,26 @@ void checkCollision(int circleX, int circleY) {
   while (dist(circleX, circleY, x, y) < radius) {
     x++;
     y++;
-    createCollisionPoints = false;
+    setCollisionPoints = false;
   }
   if (dist(circleX, circleY, x, y) > radius) {
     xFinal = x - circleX;
     yFinal = y - circleY;
     x = circleX;
     y = circleY;
-    createCollisionPoints = true;
+    setCollisionPoints = true;
   }
-  if (createCollisionPoints) {
-    if (get(circleX + xFinal + 1, circleY + yFinal + 1) == color(0) || 
-        get(circleX + xFinal + 1, circleY - yFinal - 1) == color(0) || 
-        get(circleX - xFinal - 1, circleY - yFinal - 1) == color(0) || 
-        get(circleX - xFinal - 1, circleY + yFinal + 1) == color(0) || 
-        get(circleX + radius + 1, circleY) == color(0) || 
-        get(circleX - radius - 1, circleY) == color(0) || 
-        get(circleX, circleY + radius + 1) == color(0) || 
-        get(circleX, circleY - radius - 1) == color(0)) {
+  if (setCollisionPoints) {
+    if (get(circleX + xFinal + 1, circleY + yFinal + 1) == lava1 || get(circleX + xFinal + 1, circleY - yFinal - 1) == lava1 || get(circleX - xFinal - 1, circleY - yFinal - 1) == lava1 || 
+    get(circleX - xFinal - 1, circleY + yFinal + 1) == lava1 || get(circleX + radius + 1, circleY) == lava1 || get(circleX - radius - 1, circleY) == lava1 || get(circleX, circleY + radius + 1) == lava1 ||
+    get(circleX, circleY - radius - 1) == lava1 || get(circleX + xFinal + 1, circleY + yFinal + 1) == lava2 || get(circleX + xFinal + 1, circleY - yFinal - 1) == lava2 || get(circleX - xFinal - 1, circleY - yFinal - 1) == lava2 || 
+    get(circleX - xFinal - 1, circleY + yFinal + 1) == lava2 || get(circleX + radius + 1, circleY) == lava2 || get(circleX - radius - 1, circleY) == lava2 || get(circleX, circleY + radius + 1) == lava2 ||
+    get(circleX, circleY - radius - 1) == lava2) {
       collision = true;
     } else {
       collision = false;
     }
-
+    
     fill(0, 255, 0, 0);
     noStroke();
     circle(circleX + xFinal, circleY + yFinal, 10);
@@ -48,12 +48,4 @@ void checkCollision(int circleX, int circleY) {
     circle(circleX, circleY + radius + 1, 10);
     circle(circleX, circleY - radius - 1, 10);
   }
-}
-
-void checkCollisions() {
-  // Check collision for the original circle
-  
-
-  // Check collision for the new circle
-  
 }
