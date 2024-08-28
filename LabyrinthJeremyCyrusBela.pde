@@ -45,7 +45,6 @@ void draw() {
     
     // Continue game if started
     if (gameStart) {
-      checkCollision();
       if (!gameEnd) {
         scoreManager();
       }

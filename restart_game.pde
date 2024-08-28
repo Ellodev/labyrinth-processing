@@ -6,7 +6,7 @@ void gameRestart() {
   gameEnd = false;
   isDead= false;
   Diameter = 80;
-  score = 2300;
+  score = 100;
 circleX= 50;
 circleY= 150;
   // Check if textField and cp5 are initialized before removing

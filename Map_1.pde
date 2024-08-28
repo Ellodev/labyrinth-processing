@@ -1,9 +1,15 @@
+
+
+
 boolean map1() {
   noStroke();
     
   fill(255); // White fill for squares
   //needs optimiziation
-  image(loadImage("Lava.gif"), 0, 0);
+  
+  lavaAnimation();
+  
+  image(Lava, 0, 0);
   fill(0, 0, 255);
   rect(0,100,100,100);
   
