@@ -3,9 +3,11 @@ int saturation= 200;
 
 int lavaAnimFrames;
 int playerAnimFrames;
+int endAnimFrames;
 
 PImage Player;
 PImage Lava;
+PImage endTexture;
 
 void drawDamageEffect(int saturation
 )
@@ -59,4 +61,35 @@ void playerAnimation() {
     playerAnimFrames = 0;
   }
 }
+
+void endAnimation() {
+  if(endAnimFrames < 6) {
+    endTexture = loadImage("End1.png");
+    endAnimFrames ++;
+  } else if(endAnimFrames < 12) {
+    endTexture = loadImage("End2.png");
+    endAnimFrames ++;
+  } else if(endAnimFrames < 18) {
+    endTexture = loadImage("End3.png");
+    endAnimFrames ++;
+  } else if(endAnimFrames < 24) {
+    endTexture = loadImage("End4.png");
+    endAnimFrames ++;
+  } else if(endAnimFrames < 30) {
+    endTexture = loadImage("End5.png");
+    endAnimFrames ++;
+  } else if(endAnimFrames < 36) {
+    endTexture = loadImage("End6.png");
+    endAnimFrames ++;
+  } else if(endAnimFrames < 42) {
+    endTexture = loadImage("End7.png");
+    endAnimFrames ++;
+  } else if(endAnimFrames < 48) {
+    endTexture = loadImage("End8.png");
+    endAnimFrames ++;
+  } else {
+    endAnimFrames = 0;
+  }
+}
+    
   
