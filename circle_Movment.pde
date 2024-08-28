@@ -9,7 +9,8 @@ int newCircleY = mouseY - offsetY;
 
 void circleMovement() {
   map1();  // Your custom function, assuming it draws the background or map
-  text("Points: " + score, 900,100);
+  textSize(30);
+  text("Points: " + score, 925,50);
   checkCollision(circleX, circleY);
   circleRadius = Diameter / 2;
   if(mousePressed && dragging) {

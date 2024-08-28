@@ -26,5 +26,6 @@ boolean map1() {
     rect(1000, 500, 100, 100);
   }
   
+  text("Press R to Restart", 200,50);
   return true;
 }
