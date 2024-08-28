@@ -2,7 +2,7 @@ import controlP5.*;
 
 void displayStart() {
     textAlign(CENTER);
-    fill(0, 0, 255);
+    fill(0);
     textSize(50);
     text("Move to the player to start.", 550, 400);
 }

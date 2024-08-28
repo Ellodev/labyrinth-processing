@@ -14,15 +14,13 @@ void circleMovement() {
   checkCollision(circleX, circleY);
   circleRadius = Diameter / 2;
   if(mousePressed && dragging) {
-    if(!collision) {
-      playerAnimation();
-      image(Player, circleX - circleRadius, circleY - circleRadius, Diameter, Diameter);
-    } else if(collision) {
-      image(loadImage("PlayerDmg.png"), circleX - circleRadius, circleY - circleRadius, Diameter, Diameter);
-    }
+    playerAnimation();
+    image(Player, circleX - circleRadius, circleY - circleRadius, Diameter, Diameter);
   } else  {
-      image(loadImage("Player.png"), circleX - circleRadius, circleY - circleRadius, Diameter, Diameter);
-    }
+    image(loadImage("Player.png"), circleX - circleRadius, circleY - circleRadius, Diameter, Diameter);
+  }
+  
+
   //circle(circleX, circleY, Diameter);
   
   if (dragging) {

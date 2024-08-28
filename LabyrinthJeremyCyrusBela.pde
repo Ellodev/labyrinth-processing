@@ -57,6 +57,9 @@ void draw() {
   if (keyPressed && (key == 'r' || key == 'R')) {
   gameRestart();
   }
+  if (collision) {
+    image(loadImage("PlayerDmg.png"), circleX - circleRadius, circleY - circleRadius, Diameter, Diameter);
+  }
 }
 
 // Function to handle game play
