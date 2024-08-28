@@ -18,25 +18,24 @@ int yFinal;
 
 void checkCollision() {
   int radius = Diameter / 2;
-  x = controlledMouseX;
-  y = controlledMouseY;
-  while(dist(controlledMouseX, controlledMouseY, x, y) < radius) {
+  x = circleX;
+  y = circleY;
+  while(dist(circleX, circleY, x, y) < radius) {
     x++;
     y++;
     setCollisionPoints = false;
   }
-  if (dist(controlledMouseX, controlledMouseY, x, y) > radius) {
-    xFinal = x - controlledMouseX;
-    yFinal = y - controlledMouseY;
-    x = controlledMouseX;
-    y = controlledMouseY;
-    setCollisionPoints = true;
+  if (dist(circleX, circleY, x, y) > radius) {
+    xFinal = x - circleX;
+    yFinal = y - circleY;
+    x = circleX;
+    y = circleY;
+    createCollisionPoints = true;
   }
-  if (setCollisionPoints) {
-    if (get(controlledMouseX + xFinal + 1, controlledMouseY + yFinal + 1) == color(0) || get(controlledMouseX + xFinal + 1, controlledMouseY - yFinal - 1) == color(0) || 
-    get(controlledMouseX - xFinal - 1, controlledMouseY - yFinal - 1) == color(0) || get(controlledMouseX - xFinal - 1, controlledMouseY + yFinal + 1) == color(0) || 
-    get(controlledMouseX + radius + 1, controlledMouseY) == color(0) || get(controlledMouseX - radius - 1, controlledMouseY) == color(0) || get(controlledMouseX, controlledMouseY + radius + 1) == color(0) ||
-    get(controlledMouseX, controlledMouseY - radius - 1) == color(0)) {
+  if (createCollisionPoints) {
+    if (get(circleX + xFinal + 1, circleY + yFinal + 1) == color(0) || get(circleX + xFinal + 1, circleY - yFinal - 1) == color(0) || get(circleX - xFinal - 1, circleY - yFinal - 1) == color(0) || 
+    get(circleX - xFinal - 1, circleY + yFinal + 1) == color(0) || get(circleX + radius + 1, circleY) == color(0) || get(circleX - radius - 1, circleY) == color(0) || get(circleX, circleY + radius + 1) == color(0) ||
+    get(circleX, circleY - radius - 1) == color(0)) {
       collision = true;
     } else {
       collision = false;
@@ -50,14 +49,14 @@ void checkCollision() {
     
     fill(0, 255, 0, 0);
     noStroke();
-    circle(controlledMouseX + xFinal, controlledMouseY + yFinal, 10);
-    circle(controlledMouseX + xFinal, controlledMouseY - yFinal, 10);
-    circle(controlledMouseX - xFinal, controlledMouseY - yFinal, 10);
-    circle(controlledMouseX - xFinal, controlledMouseY + yFinal, 10);
-    circle(controlledMouseX + radius + 1, controlledMouseY, 10);
-    circle(controlledMouseX - radius - 1, controlledMouseY, 10);
-    circle(controlledMouseX, controlledMouseY + radius + 1, 10);
-    circle(controlledMouseX, controlledMouseY - radius - 1, 10);
+    circle(circleX + xFinal, circleY + yFinal, 10);
+    circle(circleX + xFinal, circleY - yFinal, 10);
+    circle(circleX - xFinal, circleY - yFinal, 10);
+    circle(circleX - xFinal, circleY + yFinal, 10);
+    circle(circleX + radius + 1, circleY, 10);
+    circle(circleX - radius - 1, circleY, 10);
+    circle(circleX, circleY + radius + 1, 10);
+    circle(circleX, circleY - radius - 1, 10);
   }
 }
 

@@ -1,11 +1,11 @@
 test,100
+,100
+Max,100
 cyrus,85
 u,80
 lol,80
+,80
+faps,80
+gianluca,80
+slowly,80
 a,70
-test,70
-test,60
-null,50
-jamie,50
-anotherplayer,40
-jeremy,40
