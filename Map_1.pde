@@ -3,7 +3,7 @@ boolean map1() {
     
   fill(255); // White fill for squares
   //needs optimiziation
-  background(0);
+  image(loadImage("Lava.gif"), 0, 0);
   fill(0, 0, 255);
   rect(0,100,100,100);
   

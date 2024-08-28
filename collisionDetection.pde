@@ -1,14 +1,8 @@
 boolean collision;
 boolean setCollisionPoints;
 
-boolean px;
-boolean py;
-boolean nx;
-boolean ny;
-boolean pxpy;
-boolean pxny;
-boolean nxny;
-boolean nxpy;
+color lava1 = color(255, 132, 38);
+color lava2 = color(255, 209, 0);
 
 int x;
 int xFinal;
@@ -33,18 +27,14 @@ void checkCollision() {
     setCollisionPoints = true;
   }
   if (setCollisionPoints) {
-    if (get(circleX + xFinal + 1, circleY + yFinal + 1) == color(0) || get(circleX + xFinal + 1, circleY - yFinal - 1) == color(0) || get(circleX - xFinal - 1, circleY - yFinal - 1) == color(0) || 
-    get(circleX - xFinal - 1, circleY + yFinal + 1) == color(0) || get(circleX + radius + 1, circleY) == color(0) || get(circleX - radius - 1, circleY) == color(0) || get(circleX, circleY + radius + 1) == color(0) ||
-    get(circleX, circleY - radius - 1) == color(0)) {
+    if (get(circleX + xFinal + 1, circleY + yFinal + 1) == lava1 || get(circleX + xFinal + 1, circleY - yFinal - 1) == lava1 || get(circleX - xFinal - 1, circleY - yFinal - 1) == lava1 || 
+    get(circleX - xFinal - 1, circleY + yFinal + 1) == lava1 || get(circleX + radius + 1, circleY) == lava1 || get(circleX - radius - 1, circleY) == lava1 || get(circleX, circleY + radius + 1) == lava1 ||
+    get(circleX, circleY - radius - 1) == lava1 || get(circleX + xFinal + 1, circleY + yFinal + 1) == lava2 || get(circleX + xFinal + 1, circleY - yFinal - 1) == lava2 || get(circleX - xFinal - 1, circleY - yFinal - 1) == lava2 || 
+    get(circleX - xFinal - 1, circleY + yFinal + 1) == lava2 || get(circleX + radius + 1, circleY) == lava2 || get(circleX - radius - 1, circleY) == lava2 || get(circleX, circleY + radius + 1) == lava2 ||
+    get(circleX, circleY - radius - 1) == lava2) {
       collision = true;
     } else {
       collision = false;
-    }
-    
-    if (get(mouseX + radius + 1, mouseY) == color(0)) {
-      px = true;
-    } else {
-      px = false;
     }
     
     fill(0, 255, 0, 0);
@@ -58,15 +48,4 @@ void checkCollision() {
     circle(circleX, circleY + radius + 1, 10);
     circle(circleX, circleY - radius - 1, 10);
   }
-}
-
-void resetCollider() {
-  px = false;
-  py = false;
-  nx = false;
-  ny = false;
-  pxpy = false;
-  pxny = false;
-  nxny = false;
-  nxpy = false;
 }
