@@ -10,11 +10,11 @@ int xFinal;
 int y;
 int yFinal;
 
-void checkCollision() {
+void checkCollision(int circleX, int circleY) {
   int radius = Diameter / 2;
   x = circleX;
   y = circleY;
-  while(dist(circleX, circleY, x, y) < radius) {
+  while (dist(circleX, circleY, x, y) < radius) {
     x++;
     y++;
     setCollisionPoints = false;
