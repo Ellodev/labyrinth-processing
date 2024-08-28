@@ -3,8 +3,6 @@ void titleScreen() {
   image(img, 0, 0, 1100, 800);
   textSize(50);
   fill(255);
-  text("labyrinth", 550, 400);
-  textAlign(CENTER);
   setupButton();
   createButton();
   }
@@ -41,7 +39,7 @@ void createButton() {
   textSize(20);
   fill(0);
   textAlign(CENTER, CENTER);
-  text("Click Me", buttonX + buttonWidth / 2, buttonY + buttonHeight / 2);
+  text("Start", buttonX + buttonWidth / 2, buttonY + buttonHeight / 2);
 }
 
 void mousePressed() {

@@ -17,7 +17,7 @@ void setup() {
   setupLeaderboard();
   
   // Load assets
-  img = loadImage("labyrinth.jpg");
+  img = loadImage("Title.png");
 }
 
 void draw() {
@@ -54,7 +54,7 @@ void draw() {
       detectEnd();
     }
   }
-  if (keyPressed && (key == 'r' || key == 'R')) {
+  if (keyPressed && (key == 'R')) {
   gameRestart();
   }
   if (collision) {

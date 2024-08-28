@@ -25,7 +25,9 @@ void displayEnd() {
     text("DONE!, sadly you didnt make it on the leaderboard", 550, 250);
   } else 
   text("SCORE: " + String.valueOf(score), 550, 200); 
-  text("Press R to restart The Game", 535,355);
+  textAlign(LEFT);
+  text("Press Shift + R to restart The Game", 10, 50);
+  textAlign(CENTER);
   }
 
 ControlP5 cp5;

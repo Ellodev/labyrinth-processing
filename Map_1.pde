@@ -41,8 +41,8 @@ boolean map1() {
     path(9, 5);
     endPath(10, 5);
   }
-  
-  text("Press R to Restart", 200,50);
+  textSize(40);
+  text("Press Shift + R to Restart", 200,50);
   return true;
 }
 
