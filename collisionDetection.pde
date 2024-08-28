@@ -30,9 +30,9 @@ void checkCollision() {
     yFinal = y - circleY;
     x = circleX;
     y = circleY;
-    createCollisionPoints = true;
+    setCollisionPoints = true;
   }
-  if (createCollisionPoints) {
+  if (setCollisionPoints) {
     if (get(circleX + xFinal + 1, circleY + yFinal + 1) == color(0) || get(circleX + xFinal + 1, circleY - yFinal - 1) == color(0) || get(circleX - xFinal - 1, circleY - yFinal - 1) == color(0) || 
     get(circleX - xFinal - 1, circleY + yFinal + 1) == color(0) || get(circleX + radius + 1, circleY) == color(0) || get(circleX - radius - 1, circleY) == color(0) || get(circleX, circleY + radius + 1) == color(0) ||
     get(circleX, circleY - radius - 1) == color(0)) {
@@ -41,7 +41,7 @@ void checkCollision() {
       collision = false;
     }
     
-    if (get(controlledMouseX + radius + 1, controlledMouseY) == color(0)) {
+    if (get(mouseX + radius + 1, mouseY) == color(0)) {
       px = true;
     } else {
       px = false;
