@@ -16,14 +16,16 @@ void displayEnd() {
     text("DONE!, you made it on the leaderboard", 550, 250);
     textSize(20);
     text("enter your name to be added", 550, 270);
+
   } else if (isDead) {
   background(255, 0, 0);
-  text("LOSER!!!!", 550, 350);
+  text("LOSER!!!!", 540, 400);
   text("SCORE: " + String.valueOf(score), 550, 200); 
   } else if (achievedLeaderboard == false) {
     text("DONE!, sadly you didnt make it on the leaderboard", 550, 250);
   } else 
   text("SCORE: " + String.valueOf(score), 550, 200); 
+  text("Press R to restart The Game", 535,355);
   }
 
 ControlP5 cp5;
