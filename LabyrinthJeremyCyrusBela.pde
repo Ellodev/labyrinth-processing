@@ -1,4 +1,6 @@
-// Global variables
+import processing.sound.*;
+SoundFile file;
+
 PImage img;
 boolean gameStart = false;
 boolean leaderboardUpdated = false;
@@ -8,7 +10,8 @@ void setup() {
   // Initialize the game window and settings
   frameRate(60);
   size(1100, 800);
-  
+  file = new SoundFile(this,"Royalty Free Game Music Pack  Casual Action - Run and Jump.mp3");
+  file.play();
   // Initialize game data
   resetScore();
   setupLeaderboard();
