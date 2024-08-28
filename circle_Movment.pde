@@ -5,8 +5,8 @@ int circleRadius = Diameter / 2;
 int offsetX, offsetY;
 boolean dragging = false;
 
-void circleMovement(){
-  map1();
+void circleMovement() {
+  map1();  // Your custom function, assuming it draws the background or map
   circleRadius = Diameter / 2;
   fill(255, 0, 0);
   stroke(255, 0, 0);
@@ -16,9 +16,23 @@ void circleMovement(){
     int newCircleX = mouseX - offsetX;
     int newCircleY = mouseY - offsetY;
     
-    // TODO check if Circle is within boundaris
+    // Check if the new position is within the boundaries
+    if (newCircleX - circleRadius >= 0 && newCircleX + circleRadius <= width) {
       circleX = newCircleX;
+    }
+    
+    if (newCircleY - circleRadius >= 0 && newCircleY + circleRadius <= height) {
       circleY = newCircleY;
+    }
+  }
+}
+
+void MousePressed() {
+  // Check if the mouse is clicked within the circle area
+  if (dist(mouseX, mouseY, circleX, circleY) <= circleRadius) {
+    dragging = true;
+    offsetX = mouseX - circleX;
+    offsetY = mouseY - circleY;
   }
 }
 
