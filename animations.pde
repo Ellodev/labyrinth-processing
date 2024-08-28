@@ -1,7 +1,8 @@
 int fadeSpeed = 15;
 int saturation= 200;
 
-void drawDamageEffect(int saturation, int fadespeed)
+void drawDamageEffect(int saturation
+)
 {
   while(saturation > 20)
   {

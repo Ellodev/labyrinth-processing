@@ -1,7 +1,7 @@
 boolean gameEnd = false;
 
 void detectEnd() {
-  if (mouseX > 1050 && mouseY > 500 && mouseY < 600 && gameStart) {
+  if (circleX > 1050 && circleY > 500 && circleY < 600 && gameStart) {
     gameEnd = true;
   }
 }
