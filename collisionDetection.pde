@@ -1,5 +1,14 @@
 boolean collision;
-boolean createCollisionPoints;
+boolean setCollisionPoints;
+
+boolean px;
+boolean py;
+boolean nx;
+boolean ny;
+boolean pxpy;
+boolean pxny;
+boolean nxny;
+boolean nxpy;
 
 int x;
 int xFinal;
@@ -14,7 +23,7 @@ void checkCollision() {
   while(dist(circleX, circleY, x, y) < radius) {
     x++;
     y++;
-    createCollisionPoints = false;
+    setCollisionPoints = false;
   }
   if (dist(circleX, circleY, x, y) > radius) {
     xFinal = x - circleX;
@@ -32,6 +41,12 @@ void checkCollision() {
       collision = false;
     }
     
+    if (get(controlledMouseX + radius + 1, controlledMouseY) == color(0)) {
+      px = true;
+    } else {
+      px = false;
+    }
+    
     fill(0, 255, 0, 0);
     noStroke();
     circle(circleX + xFinal, circleY + yFinal, 10);
@@ -43,4 +58,15 @@ void checkCollision() {
     circle(circleX, circleY + radius + 1, 10);
     circle(circleX, circleY - radius - 1, 10);
   }
+}
+
+void resetCollider() {
+  px = false;
+  py = false;
+  nx = false;
+  ny = false;
+  pxpy = false;
+  pxny = false;
+  nxny = false;
+  nxpy = false;
 }
