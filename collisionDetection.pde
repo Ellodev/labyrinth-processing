@@ -9,24 +9,24 @@ int yFinal;
 
 void checkCollision() {
   int radius = Diameter / 2;
-  x = mouseX;
-  y = mouseY;
-  while(dist(mouseX, mouseY, x, y) < radius) {
+  x = circleX;
+  y = circleY;
+  while(dist(circleX, circleY, x, y) < radius) {
     x++;
     y++;
     createCollisionPoints = false;
   }
-  if (dist(mouseX, mouseY, x, y) > radius) {
-    xFinal = x - mouseX;
-    yFinal = y - mouseY;
-    x = mouseX;
-    y = mouseY;
+  if (dist(circleX, circleY, x, y) > radius) {
+    xFinal = x - circleX;
+    yFinal = y - circleY;
+    x = circleX;
+    y = circleY;
     createCollisionPoints = true;
   }
   if (createCollisionPoints) {
-    if (get(mouseX + xFinal + 1, mouseY + yFinal + 1) == color(0) || get(mouseX + xFinal + 1, mouseY - yFinal - 1) == color(0) || get(mouseX - xFinal - 1, mouseY - yFinal - 1) == color(0) || 
-    get(mouseX - xFinal - 1, mouseY + yFinal + 1) == color(0) || get(mouseX + radius + 1, mouseY) == color(0) || get(mouseX - radius - 1, mouseY) == color(0) || get(mouseX, mouseY + radius + 1) == color(0) ||
-    get(mouseX, mouseY - radius - 1) == color(0)) {
+    if (get(circleX + xFinal + 1, circleY + yFinal + 1) == color(0) || get(circleX + xFinal + 1, circleY - yFinal - 1) == color(0) || get(circleX - xFinal - 1, circleY - yFinal - 1) == color(0) || 
+    get(circleX - xFinal - 1, circleY + yFinal + 1) == color(0) || get(circleX + radius + 1, circleY) == color(0) || get(circleX - radius - 1, circleY) == color(0) || get(circleX, circleY + radius + 1) == color(0) ||
+    get(circleX, circleY - radius - 1) == color(0)) {
       collision = true;
     } else {
       collision = false;
@@ -34,13 +34,13 @@ void checkCollision() {
     
     fill(0, 255, 0, 0);
     noStroke();
-    circle(mouseX + xFinal, mouseY + yFinal, 10);
-    circle(mouseX + xFinal, mouseY - yFinal, 10);
-    circle(mouseX - xFinal, mouseY - yFinal, 10);
-    circle(mouseX - xFinal, mouseY + yFinal, 10);
-    circle(mouseX + radius + 1, mouseY, 10);
-    circle(mouseX - radius - 1, mouseY, 10);
-    circle(mouseX, mouseY + radius + 1, 10);
-    circle(mouseX, mouseY - radius - 1, 10);
+    circle(circleX + xFinal, circleY + yFinal, 10);
+    circle(circleX + xFinal, circleY - yFinal, 10);
+    circle(circleX - xFinal, circleY - yFinal, 10);
+    circle(circleX - xFinal, circleY + yFinal, 10);
+    circle(circleX + radius + 1, circleY, 10);
+    circle(circleX - radius - 1, circleY, 10);
+    circle(circleX, circleY + radius + 1, 10);
+    circle(circleX, circleY - radius - 1, 10);
   }
 }

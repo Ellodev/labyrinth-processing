@@ -1,26 +1,32 @@
+PImage img;
 boolean gameStart = false;
 boolean leaderboardUpdated = false;
+boolean titleScreenOver = false;
 
 void setup()  { // draws window, sets color 
   frameRate(60);
   size(1100,800);  
   resetScore();
   setupLeaderboard();
+  
+  img = loadImage("labyrinth.jpg");
 }
 
 void draw() {
-  if (gameEnd == false) {
+  titleScreen();
+  
+  if (!gameEnd && titleScreenOver) {
     circleMovement();
     isDeadCheck();
   } 
-  else if (gameEnd == true && !leaderboardUpdated) { 
+  else if (gameEnd && !leaderboardUpdated && titleScreenOver) { 
       updateLeaderboard();
       displayEnd();
       displayLeaderboard();
       leaderboardUpdated = true;
   }
   
-  if (playerName != null && updatedLeaderboardFile == false) {
+  if (playerName != null && !updatedLeaderboardFile && titleScreenOver) {
     for (int i = 0; i < 1; i++) {
       updateLeaderboardFile();
       displayLeaderboard();
@@ -28,19 +34,19 @@ void draw() {
   }  
   
 
-  if (mouseX < 60 && mouseX > 40 && mouseY < 160 && mouseY > 140) {
+  if (mouseX < 60 && mouseX > 40 && mouseY < 160 && mouseY > 140 && titleScreenOver) {
     gameStart = true;
   }
   
-  if(!gameStart) {
+  if(!gameStart && titleScreenOver) {
     displayStart();
   }
   
-  if (gameStart) {
+  if (gameStart && titleScreenOver) {
     checkCollision();
   }
   
-  if (gameStart && !gameEnd) {
+  if (gameStart && !gameEnd && titleScreenOver) {
     scoreManager();
   }
   detectEnd();  
