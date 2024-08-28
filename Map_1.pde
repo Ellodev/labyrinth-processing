@@ -42,6 +42,7 @@ boolean map1() {
     endPath(10, 5);
   }
   
+  text("Press R to Restart", 200,50);
   return true;
 }
 
