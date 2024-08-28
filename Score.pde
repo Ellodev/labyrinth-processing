@@ -11,7 +11,7 @@ void scoreManager() {
     frameCount = 0;
   }
   if(collision && frameCount == delay) {
-      Diameter = Diameter - 15;  
+      Diameter = Diameter - 10;  
       score = score - 20;
       
       

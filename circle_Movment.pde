@@ -11,9 +11,13 @@ void circleMovement() {
   map1();  // Your custom function, assuming it draws the background or map
   checkCollision(circleX, circleY);
   circleRadius = Diameter / 2;
-  fill(255, 0, 0);
-  stroke(255, 0, 0);
-  circle(circleX, circleY, Diameter);
+  if(mousePressed && dragging) {
+    playerAnimation();
+    image(Player, circleX - circleRadius, circleY - circleRadius, Diameter, Diameter);
+  } else {
+    image(loadImage("Player.png"), circleX - circleRadius, circleY - circleRadius, Diameter, Diameter);
+  }
+  //circle(circleX, circleY, Diameter);
   
   if (dragging) {
     int newCircleX = mouseX - offsetX;
