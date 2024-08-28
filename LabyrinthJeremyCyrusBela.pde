@@ -52,6 +52,9 @@ void draw() {
       detectEnd();
     }
   }
+  if (keyPressed && (key == 'r' || key == 'R')) {
+  gameRestart();
+  }
 }
 
 // Function to handle game play

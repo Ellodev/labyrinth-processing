@@ -7,9 +7,134 @@ boolean dragging = false;
 
 void circleMovement() {
   map1();  // Your custom function, assuming it draws the background or map
+  text("Points: " + score, 900,100);
   circleRadius = Diameter / 2;
-  fill(255, 0, 0);
-  stroke(255, 0, 0);
+  fill(123, 123, 123.
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  );
+  stroke(424, 354, 5464);
   circle(circleX, circleY, Diameter);
   
   if (dragging) {
